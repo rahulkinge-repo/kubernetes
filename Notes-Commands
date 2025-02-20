@@ -1,0 +1,9 @@
+minikube start --driver=docker 
+minikube status
+minikube delete
+
+
+Creating a POD 
+kubectl create -f pod-def.yaml
+
+
