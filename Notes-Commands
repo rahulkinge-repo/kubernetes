@@ -5,5 +5,18 @@ minikube delete
 
 Creating a POD 
 kubectl create -f pod-def.yaml
+Service Creation
+kubectl create -f service.yaml
+service/myapp-service created
+service details
+kubectl get service
+NAME            TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP   10.96.0.1      <none>        443/TCP        36d
+myapp-service   NodePort    10.102.8.239   <none>        80:30008/TCP   28s
 
+ minikube service myapp-service --url
+http://127.0.0.1:49926
+
+
+kubectl get pods,svc
 
